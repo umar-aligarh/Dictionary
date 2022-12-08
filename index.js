@@ -210,7 +210,6 @@ app.get("/upload_json_database",async(req,res)=>{
             if((studentString[j]=='t'||studentString[j]=='l')&&(studentString[j-1]=='b'||studentString[j-1]=='a'))
             {
                 keyString = studentString.substr(k+1,j-k)
-                console.log('keystring:',keyString)
                 let x=0;
                 while(x<2)
                 {
@@ -236,8 +235,6 @@ app.get("/upload_json_database",async(req,res)=>{
     }
     return res.redirect('addcsv.html');
 })
-
-
 
 app.get("/",(req,res)=>{
     res.set({
