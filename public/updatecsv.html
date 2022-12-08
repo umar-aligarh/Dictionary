@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="styles.css">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <title>Download CSV</title>
+</head>
+<body>
+<div class="container" id="container">
+	<div class="form-container sign-in-container">
+		<form action="/updatecsv" method="POST">
+			<div id="formfield">
+			<h1>Question and Co's</h1>
+			<input type="text" placeholder="Course Outcome"  name="co" required/>
+			<input type="text" placeholder="Question Id"  name="qid"  required/>
+			<input type="submit" value="Submit" id="submit" />
+			</div>
+		</form>
+	</div>
+    <div class="form-container sign-up-container">
+		<form action="/exportcsv" method="GET">
+			<div id="formfield">
+			<h1>Download CSV</h1>
+			<input type="submit" value="Download" id="submit" />
+			</div>
+		</form>
+	</div>
+    <br><br><br>
+    <input type="submit" value="Download" id="submit" />
+    <div>
+		<form action="/insert" method="POST">
+			<input type="submit" value="Download" id="submit" />
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">  
+            <div class="overlay-panel overlay-left">
+                <img src="amulogo.png" alt="logo" width="270" height="300">
+                <br>
+				<button class="ghost" id="signIn" >Add Question</button>
+                <button class="ghost" id="signIn on"  onclick="window.location.href='addcsv.html'">Back</button>
+			</div>           
+			<div class="overlay-panel overlay-right">
+                <img src="amulogo.png" alt="logo" width="270" height="300">
+                <br>
+				<button class="ghost" id="signUp">Download CSV</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

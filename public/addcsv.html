@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="styles.css">
+	<link href="assets/css/style.css" rel="stylesheet">
+    <title>CSV Module</title>
+</head>
+<body>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form enctype="multipart/form-data" action="/upload_csv" method="POST">
+		<div id="formfield">
+			<h1>Upload CSV File</h1>
+            <input type="text" placeholder="Course" name="course" required />
+            <input type="file" id="csv" name="csvupload" accept=".csv" required>
+			<input type="submit" value="Submit" id="submit" />
+		</div>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="/createcsv" method="POST">
+		<div id="formfield">
+			<h1>Add Exam Structure</h1>
+			<input type="text" placeholder="Course" name="course"  required/>
+            <div class="custom-select">
+				<select name="exam" required>
+				  <option value="0">Select Exam</option>
+				  <option value="midsem">midsem</option>
+				  <option value="endsem">endsem</option>
+				</select>
+			</div>
+			<input type="submit" value="UPDATE" id="submit" />
+		</div>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">             
+			<div class="overlay-panel overlay-left">
+                <img src="amulogo.png" alt="logo" width="270" height="300">
+                <br>
+				<button class="ghost" id="signIn" >Add Exam</button>
+				<button class="ghost" id="signIn" onclick="window.location.href='home.html'">Home</button>
+			</div>
+            
+			<div class="overlay-panel overlay-right">
+                <img src="amulogo.png" alt="logo" width="270" height="300">
+                <br>
+				<button class="ghost" id="signUp">Upload CSV</button>
+				<button class="ghost" id="signUp" onclick="window.location.href='home.html'">Home</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

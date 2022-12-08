@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="styles.css">
+    <title>NBA Database</title>
+</head>
+<body>
+    <h2>NBA Database</h2>
+<div class="container" id="container">
+	<div class="form-container sign-in-container">
+		<form action="/addquestion" method="POST">
+			<h1>Insert Marks</h1>
+			<input type="text" placeholder="Course Outcome"  name="co" required/>
+			<input type="text" placeholder="Question Id"  name="qid"  required/>
+			<input type="text" placeholder="Marks Obained" name="marksOb" required />
+            <input type="text" placeholder="Total Marks" name="marksTotal" required />
+			<input type="submit" value="Submit" id="submit" />
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">             
+			<div class="overlay-panel overlay-right">
+                <img src="amulogo.png" alt="logo" width="270" height="300">
+                <br>
+				<button class="ghost" id="back" onclick="window.location.href='index.html'" >Back</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
