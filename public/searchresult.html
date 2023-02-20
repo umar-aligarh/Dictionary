@@ -1,0 +1,105 @@
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+  
+    <!-- INCLUDING JQUERY-->
+    <script src=
+"https://code.jquery.com/jquery-3.5.1.js">
+    </script>
+  
+    <!-- CSS FOR STYLING THE PAGE -->
+    <style>
+    
+        table {
+            margin: 0 auto;
+            font-size: large;
+            border: 1px solid black;
+        }
+  
+        h1 {
+            text-align: center;
+            color: #006600;
+            font-size: xx-large;
+            font-family: 'Gill Sans', 
+                'Gill Sans MT', ' Calibri', 
+                'Trebuchet MS', 'sans-serif';
+        }
+  
+        td {
+            background-color: #E4F5D4;
+            border: 1px solid black;
+        }
+  
+        th,
+        td {
+            font-weight: bold;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+  
+        td {
+            font-weight: lighter;
+        }
+        
+
+    </style>
+</head>
+  
+<body>
+    <section>
+        <h1>Results</h1>
+  
+        <!-- TABLE CONSTRUCTION-->
+        <div class="container">
+        <table id='table'>
+            <!-- HEADING FORMATION -->
+            <tr>
+                <th>Word</th>
+                <th>Meaning</th>
+                <th>Synonyms</th>
+            </tr>
+  
+            <script>
+                $(document).ready(function () {
+  
+                    // FETCHING DATA FROM JSON FILE
+                    $.getJSON("result.json", 
+                            function (data) {
+                        var student = '';
+  
+                        // ITERATING THROUGH OBJECTS
+                        $.each(data, function (key, value) {
+  
+                            //CONSTRUCTION OF ROWS HAVING
+                            // DATA FROM JSON OBJECT
+                            student += '<tr>';
+                            student += '<td>' + 
+                                value._id + '</td>';
+  
+                            student += '<td>' + 
+                                value.meaning + '</td>';
+  
+                            student += '<td>' + 
+                                value.synonyms + '</td>';
+  
+                            student += '</tr>';
+                        });
+                          
+                        //INSERTING ROWS INTO TABLE 
+                        $('#table').append(student);
+                    });
+                });
+            </script>
+        </div>
+    </section>
+    <div class="container">
+        <div class="vertical-center">
+            <button style="margin-left: 48%;" onclick="window.location.href='home.html'">Home</button>
+        </div>
+    </div>
+</body>
+  
+</html>

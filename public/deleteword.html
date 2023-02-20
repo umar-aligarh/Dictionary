@@ -6,20 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="styles.css">
 	<link href="assets/css/style.css" rel="stylesheet">
-    <title>Update Student</title>
+    <title>Delete a Word</title>
 </head>
 <body>
     <!-- <h2>NBA Database</h2> -->
 <div class="container" id="container">
 	<div class="form-container sign-in-container">
-		<form action="/addquestion" method="POST">
+		<form action="/deleteword" method="POST">
 			<div id="formfield">
-			<h1>Insert Marks</h1>
-			<input type="text" placeholder="Course Outcome"  name="co" required/>
-			<input type="text" placeholder="Question Id"  name="qid"  required/>
-			<input type="text" placeholder="Marsrks Obained" name="marksOb" required />
-            <input type="text" placeholder="Total Marks" name="marksTotal" required />
-			<input type="submit" value="Submit" id="submit" />
+			<h1>Delete a Word</h1>
+			<input type="text" placeholder="word" name="word" required/>
+			<input type="submit" value="Delete" id="submit" />
 			</div>
 		</form>
 	</div>
@@ -28,7 +25,7 @@
 			<div class="overlay-panel overlay-right">
                 <img src="amulogo.png" alt="logo" width="270" height="300">
                 <br>
-				<button class="ghost" id="back" onclick="window.location.href='addstudent.html'" >Back</button>
+				<button class="ghost" id="back" onclick="window.location.href='home.html'" >Back</button>
 			</div>
 		</div>
 	</div>
